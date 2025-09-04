@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Первый сайт на HTML</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index1.html">Главная</a>
+        <a href="index1.html#comparison">Сравнение с 13 Pro</a>
+        <a href="index2.html">Отзывы</a>
+        <a href="#">Заказать</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Отзывы iPhone 13 Pro Max</h1>
+      <form
+        action="https://webhook.site/59725aa4-abb3-4ad3-9cea-4391cbbc5613"
+        method="post"
+      >
+        <label>
+          Имя
+          <input type="text" name="name" required />
+        </label>
+        <br />
+        <br />
+
+        <label>
+          Фамилия
+          <input type="text" name="surname" required />
+        </label>
+        <br />
+        <br />
+
+        <label>
+          Телефон
+          <select name="code" required>
+            <option value="+375">+375</option>
+            <option value="+7">+7</option>
+            <option value="+380">+380</option>
+          </select>
+          <input type="tel" name="tel" required />
+        </label>
+        <br />
+        <br />
+
+        <label>
+          E-mail
+          <input type="email" name="email" required />
+        </label>
+        <br />
+        <br />
+
+        <label>
+          Объем памяти
+          <select name="memory">
+            <option value="64">64</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
+          </select>
+        </label>
+        <br />
+        <br />
+
+        <label>
+          Способ доставки
+          <br />
+          <input
+            type="radio"
+            name="delivery"
+            id="courier"
+            value="Курьером"
+            required
+          />
+          <label for="courier">Курьером</label>
+          <br />
+          <input
+            type="radio"
+            name="delivery"
+            id="pickup"
+            value="Самовывозом"
+            required
+          />
+          <label for="pickup">Самовывозом</label>
+        </label>
+        <br />
+        <br />
+
+        <label>
+          Добавить к заказу
+          <br />
+          <input
+            type="checkbox"
+            name="more[]"
+            id="more1"
+            value="Прозрачный чехол"
+          />
+          <label for="more1">Прозрачный чехол</label>
+          <br />
+          <input
+            type="checkbox"
+            name="more[]"
+            id="more2"
+            value="Беспроводное зарядное устройстов MagSafe"
+          />
+          <label for="more2">Беспроводное зарядное устройстов MagSafe</label>
+          <br />
+          <input
+            type="checkbox"
+            name="more[]"
+            id="more3"
+            value="Наушники AirPods"
+          />
+          <label for="more3">Наушники AirPods</label>
+        </label>
+        <br />
+        <br />
+
+        <label>
+          Комментарий к заказу
+          <br />
+          <textarea name="comment" cols="30" rows="10"></textarea>
+        </label>
+        <br />
+        <br />
+
+        <label>
+          <input type="checkbox" name="conditions" required />
+          Я принимаю <a href="https://itlogia.ru/">условия сайта</a>
+        </label>
+        <br />
+        <br />
+
+        <input type="submit" name="submit" value="Заказать" />
+      </form>
+    </main>
+    <br />
+    <br />
+    <footer>
+      <hr />
+      <p>Все права защищены</p>
+    </footer>
+  </body>
+</html>
