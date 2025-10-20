@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/roboto/Roboto.ttf);
+  src: url(../assets/fonts/roboto/Roboto.woff);
+  src: url(../assets/fonts/roboto/Roboto.woff2);
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.header {
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 39px 0 30px 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 100px;
+}
+
+.menu ul li {
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.menu ul li:hover {
+  border-bottom: 2px solid black;
+  transform: scale(1.1);
+}
+
+.menu ul a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
+
+.products {
+  padding-top: 65px;
+  padding-bottom: 37px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.product {
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.product:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.45);
+}
+
+.product-image {
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.product-text {
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
+  margin: 15px 0 13px 0;
+}
+
+.button {
+  width: 260px;
+  height: 57px;
+  border: 0;
+  background: #00a9de;
+  border-radius: 10px;
+  padding: 17px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-action .button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #005068;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 100%);
+  transition: all 0.5s ease;
+}
+
+.product-action .button:hover::after {
+  transform: translate(0, 0);
+}
+
+.product-action .button span {
+  z-index: 2;
+  position: relative;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 45px;
+  right: 46px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #0176ff 0%, #72b3ff 100%);
+  animation: pulse 1s infinite;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-2 1s infinite;
+  background: radial-gradient(50% 50% at 50% 50%, #0176ff 0%, #72b3ff 100%);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-2 {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
