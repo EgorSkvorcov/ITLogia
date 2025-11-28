@@ -1,0 +1,18 @@
+:root {
+	--bgc: var(--bs-indigo);
+	--width: 200px;
+}
+
+.btn-primary {
+	background-color: var(--bgc) !important;
+	width: var(--width) !important;
+}
+.accordion-button::after {
+	filter: brightness(0) invert(1) !important;
+	opacity: 1 !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+	filter: brightness(0) invert(1) !important;
+	opacity: 1 !important;
+}
